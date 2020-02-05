@@ -6,4 +6,4 @@ WORKDIR /app
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-CMD python main.py
+ENTRYPOINT ["gunicorn", "-b", ":8080", "main:APP"]
