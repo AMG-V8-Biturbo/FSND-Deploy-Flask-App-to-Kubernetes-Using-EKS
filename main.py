@@ -61,7 +61,7 @@ def health():
     return jsonify("Healthy")
 
 
-@APP.route('/aws-auth', methods=['POST'])
+@APP.route('/auth', methods=['POST'])
 def auth():
     """
     Create JWT token based on email.
